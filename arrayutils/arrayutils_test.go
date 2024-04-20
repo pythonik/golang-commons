@@ -15,4 +15,10 @@ func TestIsEmpty(t *testing.T) {
 			t.Errorf("IsEmpty(%v) = true; want false", s)
 		}
 	})
+	t.Run("nil slice", func(t *testing.T) {
+		var s []int
+		if IsEmpty(s) {
+			t.Errorf("IsEmpty(%v) = false; want true", s)
+		}
+	})
 }
