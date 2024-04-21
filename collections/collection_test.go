@@ -41,3 +41,25 @@ func TestImmutableList_is_Immutable(t *testing.T) {
 	v, _ := list.ValueAt(0)
 	testutil.Assert(*v == originalValue, "element should be 1")
 }
+
+func TestStack_Pop(t *testing.T) {
+	stack := NewStack[int]()
+	stack.Push(1)
+	stack.Push(2)
+	stack.Push(3)
+	value, _ := stack.Pop()
+	testutil.Assert(value == 3, "value should be 3")
+	value, _ = stack.Pop()
+	testutil.Assert(value == 2, "value should be 2")
+	value, _ = stack.Pop()
+	testutil.Assert(value == 1, "value should be 1")
+}
+
+func TestStack_Size(t *testing.T) {
+	stack := NewStack[int]()
+	stack.Push(1)
+	stack.Push(2)
+	stack.Push(3)
+	size := stack.Size()
+	testutil.Assert(size == 3, "size should be 3")
+}
