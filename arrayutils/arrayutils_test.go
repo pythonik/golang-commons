@@ -79,7 +79,7 @@ func TestHead(t *testing.T) {
 		s := []int{1, 2, 3}
 		got := Head(s)
 		want := 1
-		if got.IsPresent() && got.Value() != want {
+		if got.IsPresent() && *got.Value() != want {
 			t.Errorf("Head(%v) = %v; want %v", s, got, want)
 		}
 	})
@@ -87,7 +87,7 @@ func TestHead(t *testing.T) {
 		s := []string{"1", "2", "3"}
 		got := Head(s)
 		want := "1"
-		if got.IsPresent() && got.Value() != want {
+		if got.IsPresent() && *got.Value() != want {
 			t.Errorf("Head(%v) = %v; want %v", s, got, want)
 		}
 	})
