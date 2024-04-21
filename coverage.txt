@@ -1,4 +1,15 @@
 mode: atomic
+github.com/pythonik/golang-commons/arrayutils/contains.go:3.56,4.29 1 3
+github.com/pythonik/golang-commons/arrayutils/contains.go:4.29,5.22 1 8
+github.com/pythonik/golang-commons/arrayutils/contains.go:5.22,7.4 1 1
+github.com/pythonik/golang-commons/arrayutils/contains.go:9.2,9.14 1 2
+github.com/pythonik/golang-commons/arrayutils/is_empty.go:3.33,4.14 1 4
+github.com/pythonik/golang-commons/arrayutils/is_empty.go:4.14,6.3 1 2
+github.com/pythonik/golang-commons/arrayutils/is_empty.go:7.2,7.20 1 2
+github.com/pythonik/golang-commons/arrayutils/is_empty.go:10.36,12.2 1 1
+github.com/pythonik/golang-commons/arrayutils/reverse.go:5.28,7.19 2 2
+github.com/pythonik/golang-commons/arrayutils/reverse.go:7.19,11.3 3 2
+github.com/pythonik/golang-commons/arrayutils/reverse.go:12.2,12.16 1 2
 github.com/pythonik/golang-commons/collections/bimap.go:8.47,13.2 1 1
 github.com/pythonik/golang-commons/collections/bimap.go:15.43,16.41 1 3
 github.com/pythonik/golang-commons/collections/bimap.go:16.41,18.3 1 0
@@ -28,14 +39,5 @@ github.com/pythonik/golang-commons/collections/stack.go:18.26,21.3 2 0
 github.com/pythonik/golang-commons/collections/stack.go:22.2,24.19 3 0
 github.com/pythonik/golang-commons/collections/stack.go:27.35,29.2 1 0
 github.com/pythonik/golang-commons/collections/stack.go:31.31,33.2 1 0
-github.com/pythonik/golang-commons/arrayutils/contains.go:3.56,4.29 1 3
-github.com/pythonik/golang-commons/arrayutils/contains.go:4.29,5.22 1 8
-github.com/pythonik/golang-commons/arrayutils/contains.go:5.22,7.4 1 1
-github.com/pythonik/golang-commons/arrayutils/contains.go:9.2,9.14 1 2
-github.com/pythonik/golang-commons/arrayutils/is_empty.go:3.33,4.14 1 3
-github.com/pythonik/golang-commons/arrayutils/is_empty.go:4.14,6.3 1 1
-github.com/pythonik/golang-commons/arrayutils/is_empty.go:7.2,7.20 1 2
-github.com/pythonik/golang-commons/arrayutils/is_empty.go:10.36,12.2 1 0
-github.com/pythonik/golang-commons/arrayutils/reverse.go:5.28,7.19 2 2
-github.com/pythonik/golang-commons/arrayutils/reverse.go:7.19,11.3 3 2
-github.com/pythonik/golang-commons/arrayutils/reverse.go:12.2,12.16 1 2
+github.com/pythonik/golang-commons/strutils/is_empty.go:3.29,5.2 1 2
+github.com/pythonik/golang-commons/strutils/is_empty.go:7.32,9.2 1 2
