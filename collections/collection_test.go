@@ -64,6 +64,13 @@ func TestStack_Size(t *testing.T) {
 	testutil.Assert(size == 3, "size should be 3")
 }
 
+func TestStack_IsEmpty(t *testing.T) {
+	stack := NewStack[int]()
+	testutil.Assert(stack.IsEmpty(), "stack should be empty")
+	stack.Push(1)
+	testutil.Assert(!stack.IsEmpty(), "stack should not be empty")
+}
+
 func TestStack_Peek(t *testing.T) {
 	stack := NewStack[int]()
 	stack.Push(1)
