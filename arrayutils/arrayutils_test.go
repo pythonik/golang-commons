@@ -73,3 +73,22 @@ func TestReverse(t *testing.T) {
 		}
 	})
 }
+
+func TestHead(t *testing.T) {
+	t.Run("Head of int slice", func(t *testing.T) {
+		s := []int{1, 2, 3}
+		got := Head(s)
+		want := 1
+		if got.IsPresent() && got.Value() != want {
+			t.Errorf("Head(%v) = %v; want %v", s, got, want)
+		}
+	})
+	t.Run("Head of string slice", func(t *testing.T) {
+		s := []string{"1", "2", "3"}
+		got := Head(s)
+		want := "1"
+		if got.IsPresent() && got.Value() != want {
+			t.Errorf("Head(%v) = %v; want %v", s, got, want)
+		}
+	})
+}
