@@ -1,4 +1,4 @@
-package arrayutils
+package collections
 
 import "fmt"
 

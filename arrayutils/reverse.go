@@ -1,5 +1,7 @@
 package arrayutils
 
+import "fmt"
+
 func Reverse[T any](s []T) {
 	first, last := 0, len(s)-1
 	for first < last {
@@ -7,4 +9,5 @@ func Reverse[T any](s []T) {
 		first++
 		last--
 	}
+	fmt.Println(s)
 }

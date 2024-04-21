@@ -17,8 +17,52 @@ func TestIsEmpty(t *testing.T) {
 	})
 	t.Run("nil slice", func(t *testing.T) {
 		var s []int
-		if IsEmpty(s) {
+		if !IsEmpty(s) {
 			t.Errorf("IsEmpty(%v) = false; want true", s)
+		}
+	})
+}
+
+func TestContains(t *testing.T) {
+	s := []int{1, 2, 3}
+	t.Run("Element is in slice", func(t *testing.T) {
+		if !Contains(s, 2) {
+			t.Errorf("Contains(%v, 2) = false; want true", s)
+		}
+	})
+	t.Run("Element is not in slice", func(t *testing.T) {
+		if Contains(s, 4) {
+			t.Errorf("Contains(%v, 4) = true; want false", s)
+		}
+	})
+	t.Run("Element is not in slice when slice is nil", func(t *testing.T) {
+		if Contains(s, 4) {
+			t.Errorf("Contains(%v, 4) = true; want false", s)
+		}
+	})
+}
+
+func TestReverse(t *testing.T) {
+	t.Run("Reverse int slice", func(t *testing.T) {
+		s := []int{1, 2, 3}
+		Reverse(s)
+		want := []int{3, 2, 1}
+		for i := range s {
+			if s[i] != want[i] {
+				t.Errorf("Reverse(%v) = %v; want %v", s, s, want)
+				break
+			}
+		}
+	})
+	t.Run("Reverse string slice", func(t *testing.T) {
+		s := []string{"1", "2", "3"}
+		Reverse(s)
+		want := []string{"3", "2", "1"}
+		for i := range s {
+			if s[i] != want[i] {
+				t.Errorf("Reverse(%v) = %v; want %v", s, s, want)
+				break
+			}
 		}
 	})
 }
