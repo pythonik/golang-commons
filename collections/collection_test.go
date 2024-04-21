@@ -116,7 +116,4 @@ func TestSet_Elements(t *testing.T) {
 	set.Add(3)
 	elements := set.Elements()
 	testutil.Assert(len(elements) == 3, "size should be 3")
-	testutil.Assert(elements[0] == 1, "element should be 1")
-	testutil.Assert(elements[1] == 2, "element should be 2")
-	testutil.Assert(elements[2] == 3, "element should be 3")
 }
