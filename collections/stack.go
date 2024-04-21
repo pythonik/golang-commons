@@ -14,6 +14,15 @@ func (s *Stack[T]) Push(value T) {
 	s.elements = append(s.elements, value)
 }
 
+func (s *Stack[T]) Peek() (T, error) {
+	if len(s.elements) == 0 {
+		var zero T
+		return zero, fmt.Errorf("peek from empty stack")
+	}
+	return s.elements[len(s.elements)-1], nil
+
+}
+
 func (s *Stack[T]) Pop() (T, error) {
 	if len(s.elements) == 0 {
 		var zero T

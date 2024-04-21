@@ -63,3 +63,53 @@ func TestStack_Size(t *testing.T) {
 	size := stack.Size()
 	testutil.Assert(size == 3, "size should be 3")
 }
+
+func TestStack_Peek(t *testing.T) {
+	stack := NewStack[int]()
+	stack.Push(1)
+	stack.Push(2)
+	stack.Push(3)
+	value, _ := stack.Peek()
+	testutil.Assert(value == 3, "value should be 3")
+	value, _ = stack.Peek()
+	testutil.Assert(value == 3, "value should be 3")
+}
+
+func TestSet_Add(t *testing.T) {
+	set := NewSet[int]()
+	set.Add(1)
+	set.Add(2)
+	set.Add(3)
+	testutil.Assert(set.Size() == 3, "size should be 3")
+}
+
+func TestSet_Contains(t *testing.T) {
+	set := NewSet[int]()
+	set.Add(1)
+	set.Add(2)
+	set.Add(3)
+	testutil.Assert(set.Contains(1), "should contain 1")
+	testutil.Assert(set.Contains(2), "should contain 2")
+	testutil.Assert(set.Contains(3), "should contain 3")
+}
+
+func TestSet_Remove(t *testing.T) {
+	set := NewSet[int]()
+	set.Add(1)
+	set.Add(2)
+	set.Add(3)
+	set.Remove(1)
+	testutil.Assert(set.Size() == 2, "size should be 2")
+}
+
+func TestSet_Elements(t *testing.T) {
+	set := NewSet[int]()
+	set.Add(1)
+	set.Add(2)
+	set.Add(3)
+	elements := set.Elements()
+	testutil.Assert(len(elements) == 3, "size should be 3")
+	testutil.Assert(elements[0] == 1, "element should be 1")
+	testutil.Assert(elements[1] == 2, "element should be 2")
+	testutil.Assert(elements[2] == 3, "element should be 3")
+}
