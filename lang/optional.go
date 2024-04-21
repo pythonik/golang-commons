@@ -13,6 +13,13 @@ func (o Optional[T]) IsPresent() bool {
 	return o.err == nil
 }
 
+func (o Optional[T]) OrElse(other T) T {
+	if o.err != nil {
+		return other
+	}
+	return o.value
+}
+
 func (o Optional[T]) Value() T {
 	return o.value
 }
