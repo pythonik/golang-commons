@@ -27,8 +27,23 @@ func (b *BiMap[K, V]) GetByKey(key K) (V, bool) {
 	val, ok := b.keyToValue[key]
 	return val, ok
 }
+func (b *BiMap[K, V]) GetByKeyDefault(key K, defaultValue V) V {
+	val, ok := b.keyToValue[key]
+	if !ok {
+		return defaultValue
+	}
+	return val
+}
 
 func (b *BiMap[K, V]) GetByValue(value V) (K, bool) {
 	key, ok := b.valueToKey[value]
 	return key, ok
+}
+
+func (b *BiMap[K, V]) GetByValueDefault(value V, defaultValue K) K {
+	key, ok := b.valueToKey[value]
+	if !ok {
+		return defaultValue
+	}
+	return key
 }

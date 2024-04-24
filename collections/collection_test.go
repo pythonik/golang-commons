@@ -117,3 +117,14 @@ func TestSet_Elements(t *testing.T) {
 	elements := set.Elements()
 	testutil.Assert(len(elements) == 3, "size should be 3")
 }
+
+func TestBiMap_GetByKeyDefault(t *testing.T) {
+	biMap := NewBiMap[int, string]()
+	biMap.Put(1, "one")
+	biMap.Put(2, "two")
+	biMap.Put(3, "three")
+	value1Str := biMap.GetByKeyDefault(1, "default")
+	testutil.Assert(value1Str == "one", "value should be one")
+	value1Str = biMap.GetByKeyDefault(4, "default")
+	testutil.Assert(value1Str == "default", "value should be default")
+}
